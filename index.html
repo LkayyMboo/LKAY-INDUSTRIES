@@ -3,12 +3,23 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>LKAY Industries</title>
+
+<title>Praseodymium Web Co | Digital Engineering</title>
+
+<meta name="description" content="Praseodymium Web Co builds rare, high-performance digital systems engineered for speed, scalability, and long-term growth.">
+
+<link rel="icon" type="image/png" href="file_0000000065a4722f975f84321482ed83.png">
+
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;800;900&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 <style>
+
+html{
+    scroll-behavior:smooth;
+}
+
 body{
     background:#000;
     color:white;
@@ -16,11 +27,10 @@ body{
     overflow-x:hidden;
 }
 
-
+/* ================= INTRO ================= */
 
 .intro{
     position:fixed;
-
     width:100%;
     height:100vh;
     background:#000;
@@ -38,16 +48,22 @@ body{
 
 .door{
     display:flex;
-    flex-direction: column;
+    flex-direction:column;
     font-family:'Orbitron', sans-serif;
-    font-weight:750px;
+    font-weight:750;
     font-size:4rem;
-    letter-spacing:0px;
     text-transform:uppercase;
-    align-items: center;
+    align-items:center;
+    justify-content:center;
+    animation: zoomIn 2s ease forwards;
 }
 
+@keyframes zoomIn{
+    0%{ transform:scale(0.8); opacity:0; }
+    100%{ transform:scale(1); opacity:1; }
+}
 
+/* Metallic Chrome */
 .metal{
     background:linear-gradient(
         180deg,
@@ -79,13 +95,14 @@ body{
     transform:translateX(140%);
 }
 
-
+/* ================= NAVBAR ================= */
 
 .navbar{
     background:rgba(0,0,0,0.85);
+    backdrop-filter:blur(10px);
 }
 
-
+/* ================= SECTIONS ================= */
 
 section{
     padding:120px 0;
@@ -95,11 +112,13 @@ section{
 .highlight{ color:#00ff88; }
 .blue{ color:#00aaff; }
 
+/* ================= GLASS CARD ================= */
+
 .card-custom{
     background:rgba(255,255,255,0.05);
     border:1px solid rgba(0,255,136,0.2);
     backdrop-filter:blur(10px);
-    border-radius:15px;
+    border-radius:20px;
     padding:40px;
     transition:0.4s;
 }
@@ -109,23 +128,20 @@ section{
     transform:translateY(-8px);
 }
 
+/* ================= REVEAL ================= */
+
 .reveal{
     opacity:0;
     transform:translateY(40px);
-    transition:2s ease;
+    transition:1.5s ease;
 }
 
 .reveal.active{
     opacity:1;
     transform:translateY(0);
 }
-.logo-placeholder img{
-    align-items:left;
-    height:105px ;
-    width: 150px;
-   
-}
 
+/* ================= CONTACT ================= */
 
 .contact-glow{
     background: rgba(255,255,255,0.03);
@@ -143,23 +159,6 @@ section{
     transform:translateY(-8px);
 }
 
-
-.contact-glow::before{
-    content:"";
-    position:absolute;
-    top:0;
-    left:-100%;
-    width:100%;
-    height:2px;
-    background:linear-gradient(90deg,transparent,#00ff88,transparent);
-    animation:scanline 6s linear infinite;
-}
-
-@keyframes scanline{
-    0%{ left:-100%; }
-    100%{ left:100%; }
-}
-
 .contact-item{
     padding:20px;
     border-radius:15px;
@@ -172,6 +171,22 @@ section{
     background:rgba(0,255,136,0.05);
     transform:scale(1.02);
 }
+
+.logo-placeholder img{
+    height:80px;
+}
+
+/* CTA Button */
+.btn-outline-success{
+    border-color:#00ff88;
+    color:#00ff88;
+}
+
+.btn-outline-success:hover{
+    background:#00ff88;
+    color:#000;
+}
+
 </style>
 </head>
 
@@ -179,7 +194,9 @@ section{
 
 <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
   <div class="container">
-    <div class="logo-placeholder" ><img src="file_0000000065a4722f975f84321482ed83.png"></div>
+    <div class="logo-placeholder">
+        <img src="file_0000000065a4722f975f84321482ed83.png">
+    </div>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -193,7 +210,7 @@ section{
   </div>
 </nav>
 
-
+<!-- INTRO -->
 <div class="intro" id="intro">
     <div class="door" id="door">
         <div class="left metal">LKAY</div>
@@ -201,68 +218,122 @@ section{
     </div>
 </div>
 
-
+<!-- ABOUT -->
 <section id="about" class="d-flex align-items-center">
-  <div class="container reveal">
+  <div class="container reveal text-center">
     <h1><span class="highlight">Praseodymium</span> Web Co.</h1>
+
     <div class="card-custom mt-4">
-      Praseodymium Web Co. is a digital engineering division dedicated to building rare, high-performance web experiences.
-
-We don’t “design websites.”
-We engineer digital systems.
-
-Born from a belief that the modern web demands more than templates and surface-level aesthetics, Praseodymium Web Co. was created to deliver precision-built platforms — optimized for speed, scalability, security, and long-term growth.
-
-Like the rare earth element we’re named after, we focus on strength, refinement, and performance under pressure.
+      We don’t design websites.  
+      <br><br>
+      <strong>We engineer digital systems.</strong>
+      <br><br>
+      Built for speed, scalability, and long-term growth — our platforms are precision-coded, performance-optimized, and structured for businesses that demand more than templates.
     </div>
+
+    <a href="#contact" class="btn btn-outline-success mt-4 px-4 py-2">
+       Start a Project
+    </a>
+
   </div>
 </section>
 
-<section id="services" class="d-flex align-items-center">
+<!-- SERVICES -->
+ <section id="services" class="d-flex align-items-center">
   <div class="container reveal">
-    <h1 class="blue">Our Expertise</h1>
-    <div class="card-custom mt-4">
-      • Custom Website Development <br><br>
-      • UX / UI Precision <br><br>
-      • Custom web applications <br><br>
-      • Graphic Designs<br><br>
-    
-      
-      
+    <h1 class="blue text-center">Our Services</h1>
+
+    <div class="row mt-5 g-4">
+
+      <div class="col-md-6 col-lg-4">
+        <div class="card-custom h-100">
+          <h5 class="highlight">Custom Web Design</h5>
+          <p>
+            Bespoke website designs crafted to reflect your brand identity,
+            engage your audience, and elevate your digital presence.
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="card-custom h-100">
+          <h5 class="highlight">Full-Stack Website Development</h5>
+          <p>
+            End-to-end web development solutions — from front-end interfaces
+            to secure, scalable back-end systems.
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="card-custom h-100">
+          <h5 class="highlight">Digital Solutions</h5>
+          <p>
+            Strategic digital systems and automation tools designed to
+            streamline operations and improve business efficiency.
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="card-custom h-100">
+          <h5 class="highlight">Professional CV Creation</h5>
+          <p>
+            Modern, ATS-optimized CV designs tailored to help professionals
+            stand out in competitive job markets.
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="card-custom h-100">
+          <h5 class="highlight">PowerPoint & Presentation Design</h5>
+          <p>
+            High-impact presentation decks structured for clarity,
+            persuasion, and professional delivery.
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="card-custom h-100">
+          <h5 class="highlight">Graphic & Advertising Design</h5>
+          <p>
+            Poster design, menu layouts, and promotional materials engineered
+            to capture attention and strengthen brand visibility.
+          </p>
+        </div>
+      </div>
 
     </div>
   </div>
 </section>
 
+<!-- CONTACT -->
 <section id="contact" class="d-flex align-items-center">
   <div class="container reveal text-center">
 
-    <h1>
-      <span class="highlight">Contact</span> Us
-    </h1>
+    <h1><span class="highlight">Contact</span> Us</h1>
 
     <div class="contact-glow mt-5 mx-auto" style="max-width:600px;">
 
       <div class="contact-item">
         <h5 class="mb-3">📡 Direct Call</h5>
-        <a href="tel:+27817149968"
+        <a href="tel:0740618566"
            class="highlight text-decoration-none fs-4">
-           081 714 9968
+           074 061 8566
         </a>
       </div>
 
       <div class="contact-item">
         <h5 class="mb-3">⚡ WhatsApp Line</h5>
         <a href="https://wa.me/27740618566" 
-   target="_blank"
-   class="blue text-decoration-none fs-5">
-
-   <i class="fab fa-whatsapp me-2"></i>
-   Start WhatsApp Chat
-</a>
+           target="_blank"
+           class="blue text-decoration-none fs-5">
+           <i class="fab fa-whatsapp me-2"></i>
+           Start WhatsApp Chat
+        </a>
       </div>
-
-    
 
     </div>
 
@@ -272,14 +343,16 @@ Like the rare earth element we’re named after, we focus on strength, refinemen
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
 <script>
+
+/* Intro Animation */
 window.addEventListener("load",()=>{
     setTimeout(()=>{
         document.getElementById("door").classList.add("split");
         document.getElementById("intro").classList.add("fade-out");
-    },2000);
+    },2200);
 });
 
-
+/* Scroll Reveal */
 window.addEventListener("scroll",()=>{
     document.querySelectorAll(".reveal").forEach(el=>{
         if(el.getBoundingClientRect().top < window.innerHeight - 100){
@@ -287,26 +360,10 @@ window.addEventListener("scroll",()=>{
         }
     });
 });
+
 </script>
 
 </body>
 </html>
-   
-  
-
-
-
-
-
-
-
-
-
-    
-
-     
-
 
   
-   
-
